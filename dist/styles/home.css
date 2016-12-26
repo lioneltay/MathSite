@@ -1,0 +1,32 @@
+
+
+.Home h1 {
+	color: #467FAF;
+}
+
+.Topic {
+}
+
+.Topic h2 {
+	font-size: 20px;
+	font-weight: 700;
+	color: #4E84B1;
+}
+
+.SubTopic {
+	margin: 2px 0;
+	font-weight: 700;
+}
+
+.SubTopic div:first-child {
+	width: 0%;
+	min-width: 15px;
+	margin-right: 10px;
+	color: #4E84B1
+}
+
+.SubTopic a {
+	display: flex;
+	color: #6D7182;
+	font-weight: 700;
+}

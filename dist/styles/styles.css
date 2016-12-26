@@ -1,0 +1,11 @@
+@import url("./home.css");
+@import url("./main.css");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+

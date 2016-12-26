@@ -23,7 +23,7 @@ const Topic = ({ name, topicNum, children }) => {
 			<div className="row">
 				<div className="col-sm-3" />
 				<div className="col-sm-9">
-					<ul key={Math.random()}>
+					<ul>
 						{subtopics}
 					</ul>
 				</div>

@@ -4,7 +4,6 @@ import { Topic, SubTopic, Contents } from 'components'
 const Home = () => (
 	<div className='Home'>
 		<h1>Contents</h1>
-		$\[frac{1}{2}\]$
 		<Contents>
 			<Topic name='Sets'>
 				<SubTopic name='Notation' />

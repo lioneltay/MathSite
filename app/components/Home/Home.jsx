@@ -6,13 +6,17 @@ const Home = () => (
 		<h1>Contents</h1>
 		<Contents>
 			<Topic name='Sets'>
-				<SubTopic name='Notation' />
-				<SubTopic name='Common Number Sets' />
-				<SubTopic name='Identities' />
+				<SubTopic name='Set Notation' path="/math/Sets/SetNotation"/>
+				<SubTopic name='Set Builder Notation' path="/math/Sets/SetBuilder"/>
 			</Topic>
-			<Topic name='Functions'></Topic>
+			
+			<Topic name='Functions'>
+				<SubTopic name='Absolute Value Functions' path="/math/Functions/AbsoluteValueFunctions"/>
+				<SubTopic name='Reciprocal Functions' path="/math/Functions/ReciprocalFunctions"/>
+			</Topic>
+			
 			<Topic name='Coordinate Geometry'>
-				<SubTopic name='Circles, Ellipses and Hyperbolas' path="CoordinateGeometry/CirclesEllipsesAndHyperbolas"/>
+				<SubTopic name='Circles, Ellipses and Hyperbolas' path="/math/CoordinateGeometry/CirclesEllipsesAndHyperbolas"/>
 			</Topic>
 			<Topic name='Trigonometry and Circular Functions'></Topic>
 			

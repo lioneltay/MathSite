@@ -9,7 +9,7 @@ const Questions = ({ children }) => {
 	))
 	
 	return (
-		<div>
+		<div className='Questions'>
 			{questions}
 		</div>
 	)

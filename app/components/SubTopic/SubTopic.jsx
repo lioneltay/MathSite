@@ -19,7 +19,7 @@ const SubTopic = (props) => {
 
 SubTopic.defaultProps = {
 	external: false,
-	path: '/',
+	path: '/math',
 	topicNum: 'error',
 }
 

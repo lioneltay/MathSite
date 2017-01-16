@@ -14,6 +14,8 @@ const Home = () => (
 			<Topic name='Functions'>
 				<SubTopic name='Absolute Value Functions [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/AbsoluteValueFunctions`}/>
 				<SubTopic name='Reciprocal Functions [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/ReciprocalFunctions`}/>
+				<SubTopic name='Inverse Functions [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/InverseFunctions`}/>
+				<SubTopic name='Composite Functions [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/CompositeFunctions`}/>
 			</Topic>
 			
 			<Topic name='Coordinate Geometry'>

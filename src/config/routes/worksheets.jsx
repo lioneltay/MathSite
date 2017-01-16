@@ -5,6 +5,8 @@ import { WORKSHEETS_URL } from 'config/constants'
 import {
 	AbsoluteValueFunctions,
 	ReciprocalFunctions,
+	CompositeFunctions,
+	InverseFunctions,
 } from 'components/worksheet/topics/Functions'
 
 import { 
@@ -21,8 +23,10 @@ const worksheetRoutes = (
 		<Route path='Sets/SetNotation' component={SetNotation} />	
 		<Route path='Sets/SetBuilder' component={SetBuilder} />	
 
-		<Route path='Functions/AbsoluteValueFunctions' component={AbsoluteValueFunctions} />			
-		<Route path='Functions/ReciprocalFunctions' component={ReciprocalFunctions} />		
+		<Route path='Functions/AbsoluteValueFunctions' component={AbsoluteValueFunctions} />	
+		<Route path='Functions/ReciprocalFunctions' component={ReciprocalFunctions} />
+		<Route path='Functions/CompositeFunctions' component={CompositeFunctions} />
+		<Route path='Functions/InverseFunctions' component={InverseFunctions} />
 
 		<Route path='CoordinateGeometry/CirclesEllipsesAndHyperbolas' component={CirclesEllipsesAndHyperbolas} />	
 	</Route>

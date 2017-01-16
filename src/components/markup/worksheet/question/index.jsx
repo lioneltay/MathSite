@@ -35,6 +35,10 @@ export function Question({ children, number, partsPerRow }) {
 	)
 }
 
+Question.defaultProps = {
+	partsPerRow: 1,
+}
+
 export function Description({ children }) {
 	return (
 		<div className='row Description'>{

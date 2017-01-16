@@ -1,6 +1,6 @@
 import firebase from 'firebase'
 
-export const BASE_URL = 'math'
+export const BASE_URL = '/math'
 export const WORKSHEETS_URL = 'worksheets'
 
 const appConfig = {

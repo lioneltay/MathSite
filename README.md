@@ -2,7 +2,6 @@ Math Site for Tutoring
 
 
 *** TODOS ***
--fix content / home page structure (create a contents directory)
 -fix TOPIC title / number overflow just like for subtopics
 
 -write worksheets for next lesson! BRYAN FIRST since nick is away

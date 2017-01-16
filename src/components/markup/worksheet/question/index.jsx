@@ -7,11 +7,11 @@ export function Question({ children, number, partsPerRow }) {
 	const parts = children.filter(child => child.type.name === 'Part')
 	const hasParts = parts.length > 0
 	
-	function partToComp(part, key) {
+	function partToComp(part, index) {
 		const width = Math.floor(12/partsPerRow)
 		return (
-			<div className={`col-xs-${width} col-sm-${width} col-md-${width} col-lg-${width}`} key={key}>
-				<Part {...part.props} />
+			<div className={`col-xs-${width} col-sm-${width} col-md-${width} col-lg-${width}`} key={index}>
+				<Part {...part.props} number={String.fromCharCode(97 + index)} />
 			</div>
 		)
 	}
@@ -54,6 +54,10 @@ export function Part({ children, number }) {
 			<div className='col-xs-11'>{children}</div>
 		</div>
 	)
+}
+
+Part.propTypes = {
+	number: PropTypes.string.isRequired,
 }
 
 

@@ -2,9 +2,21 @@ Math Site for Tutoring
 
 
 *** TODOS ***
+-write worksheets for next lesson! BRYAN FIRST since nick is away.
+	-composite questions
+	-composite assignment
+	-inverse questions
+	-inverse assignment
+	
+-answers markup
+	-only for questions not assignments
+	-toggle
+	
+-notes default styles and structure
+
 -fix TOPIC title / number overflow just like for subtopics
 
--write worksheets for next lesson! BRYAN FIRST since nick is away
+
 -lesson history
 
 

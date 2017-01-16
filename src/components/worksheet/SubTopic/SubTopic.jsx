@@ -5,11 +5,11 @@ import { BASE_URL } from 'config/constants'
 const SubTopic = (props) => {
 	const internals = [
 		props.external
-				? <div><a href={props.path} key={0}>{props.topicNum}</a></div>
-		: <div><Link to={props.path} key={0}>{props.topicNum}</Link></div>,
+				? <div key={0}><a href={props.path}>{props.topicNum}</a></div>
+		: <div key={0}><Link to={props.path}>{props.topicNum}</Link></div>,
 		props.external
-			? <div><a href={props.path} key={1}>{props.name}</a></div>
-			: <div><Link to={props.path} key={1}>{props.name}</Link></div>,		
+			? <div key={1}><a href={props.path}>{props.name}</a></div>
+			: <div key={1}><Link to={props.path}>{props.name}</Link></div>,		
 	]
 	
 	return (

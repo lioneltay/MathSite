@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { SubTopic } from 'components'
+import { SubTopic } from 'components/worksheet'
 
 const Topic = ({ name, topicNum, children }) => {
 	children = React.Children.toArray(children)

@@ -2,21 +2,11 @@ import React from 'react'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import { BASE_URL } from 'config/constants'
 
-import { Main, Home } from 'components'
+import worksheetRoutes from './worksheets'
 
-import {
-	AbsoluteValueFunctions,
-	ReciprocalFunctions,
-} from 'components/Topics/Functions'
-
-import { 
-	CirclesEllipsesAndHyperbolas,
-} from 'components/Topics/CoordinateGeometry'
-
-import { 
-	SetNotation,
-	SetBuilder,
-} from 'components/Topics/Sets'
+import { Main } from 'components'
+// The home page is currently the worksheet page, can easily be changed
+import { Home } from 'components/worksheet'
 
 import {
 	Profile,
@@ -49,13 +39,8 @@ const routes = (
 				<Route path='lessonhistory' component={LessonHistory} cows='moo'/>
 			</Route>
 			
-			<Route path='Sets/SetNotation' component={SetNotation} />	
-			<Route path='Sets/SetBuilder' component={SetBuilder} />	
+			{worksheetRoutes}
 			
-			<Route path='Functions/AbsoluteValueFunctions' component={AbsoluteValueFunctions} />			
-			<Route path='Functions/ReciprocalFunctions' component={ReciprocalFunctions} />		
-			
-			<Route path='CoordinateGeometry/CirclesEllipsesAndHyperbolas' component={CirclesEllipsesAndHyperbolas} />	
 		</Route>
 	</Router>
 )

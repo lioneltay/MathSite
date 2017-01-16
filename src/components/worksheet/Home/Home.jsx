@@ -1,23 +1,23 @@
 import React, { PropTypes } from 'react'
-import { Topic, SubTopic, Contents } from 'components'
-import { BASE_URL } from 'config/constants'
+import { Topic, SubTopic, Contents } from 'components/worksheet'
+import { BASE_URL, WORKSHEETS_URL } from 'config/constants'
 
 const Home = () => (
 	<div className='Home'>
 		<h1>Contents - Worksheets/Notes</h1>
 		<Contents>
 			<Topic name='Sets'>
-				<SubTopic name='Set Notation [TODO]' path={`${BASE_URL}/Sets/SetNotation`}/>
-				<SubTopic name='Set Builder Notation [TODO]' path={`${BASE_URL}/Sets/SetBuilder`}/>
+				<SubTopic name='Set Notation [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Sets/SetNotation`}/>
+				<SubTopic name='Set Builder Notation [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Sets/SetBuilder`}/>
 			</Topic>
 			
 			<Topic name='Functions'>
-				<SubTopic name='Absolute Value Functions [TODO]' path={`${BASE_URL}/Functions/AbsoluteValueFunctions`}/>
-				<SubTopic name='Reciprocal Functions [TODO]' path={`${BASE_URL}/Functions/ReciprocalFunctions`}/>
+				<SubTopic name='Absolute Value Functions [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/AbsoluteValueFunctions`}/>
+				<SubTopic name='Reciprocal Functions [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/ReciprocalFunctions`}/>
 			</Topic>
 			
 			<Topic name='Coordinate Geometry'>
-				<SubTopic name='Circles, Ellipses and Hyperbolas [TODO]' path={`${BASE_URL}/CoordinateGeometry/CirclesEllipsesAndHyperbolas`}/>
+				<SubTopic name='Circles, Ellipses and Hyperbolas [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/CoordinateGeometry/CirclesEllipsesAndHyperbolas`}/>
 			</Topic>
 			
 			<Topic name='Trigonometry and Circular Functions'></Topic>

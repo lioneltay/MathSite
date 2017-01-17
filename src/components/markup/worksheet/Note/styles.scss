@@ -1,6 +1,13 @@
+$padding-left: 20px;
+
 .Note {
 	margin: 15px auto 0 auto;
-	padding: 20px;
+	padding: $padding-left;
 	border: 9px double grey;
 	width: 80%;
+	
+	ul {
+		list-style-position: outside;
+		margin-left: $padding-left;
+	}
 }

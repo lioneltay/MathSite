@@ -57,7 +57,7 @@ export function Part({ children, number }) {
 }
 
 Part.propTypes = {
-	number: PropTypes.string.isRequired,
+	number: PropTypes.string,
 }
 
 

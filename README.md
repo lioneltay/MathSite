@@ -2,12 +2,8 @@ Math Site for Tutoring
 
 
 *** TODOS ***
--write worksheets for next lesson! BRYAN FIRST since nick is away.
-	-composite questions
-	-composite assignment
-	-inverse questions
-	-inverse assignment
-	
+-dynamic partsPerRow
+
 -answers markup
 	-only for questions not assignments
 	-toggle

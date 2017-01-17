@@ -148,11 +148,15 @@ const CompositeFunctions = () => (
 		
 		<Question number='4'>
 			<Description>
-				If <T t='f: (-\infty, 3] \rightarrow \mathbb{R}, f(x) = x^2 + k'/> and <T t='g: [6, \infty) \rightarrow \mathbb{R} ,g(x) = -\sqrt{x-6} + k'/>, 
+				If <T t='f: (-\infty, 3] \rightarrow \mathbb{R}, f(x) = x^2 + k'/> and <T t='g: [6, \infty) \rightarrow \mathbb{R} ,g(x) = -\sqrt{x-6} + k'/>
 			</Description>
 			<Part>Find the ranges of <T t='f'/> and <T t='g'/></Part>
 			<Part>Find the set of values of <T t='k'/> such that both <T t='f(g(x))'/> and <T t='g(f(x))'/> exist.</Part>
 		</Question>
+		
+		
+		<h2>Extra</h2>
+		
 		
 	</div>
 )

@@ -2,18 +2,23 @@ Math Site for Tutoring
 
 
 *** TODOS ***
+-deployment
+
 -dynamic partsPerRow
 
 -answers markup
 	-only for questions not assignments
 	-toggle
-	
+
+-allow parts to collapse when screen is too small
+
 -notes default styles and structure
 
 -fix TOPIC title / number overflow just like for subtopics
 
 
 -lesson history
+
 
 
 *** FEATURES ***

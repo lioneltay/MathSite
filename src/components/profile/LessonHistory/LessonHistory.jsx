@@ -1,12 +1,46 @@
 import React, { PropTypes, Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchUsersLessonHistory } from 'redux/modules/usersLessonHistory'
+import { Link } from 'react-router'
+import { Loading } from 'components/spinner'
+import './styles.scss'
 
 const Lesson = ({ lesson }) => {
+	console.log(JSON.stringify(lesson, null, 2))
+	
+	function taskLink(task, key) {
+		let item = task.text
+		
+		if (task.link) {
+			if (task.link.external) {
+				item = <a href={task.link.url}>{task.text}</a>
+			} else {
+				item = <Link to={task.link.url}>{task.text}</Link>
+			}
+		}
+		
+		return (
+			<li key={key}>
+				<div>
+					{item}
+				</div>
+			</li>
+		)
+	}
+	
+	function title(lesson) {
+		return `${lesson.title}`
+	}
+	
 	return (
-		<div>
-			<div>{lesson.timestamp}</div>
-			<div>{lesson.record.text}</div>
+		<div className='Lesson card'>
+			<h1>{title(lesson)}</h1>
+			<div>
+				<h2>Homework - {lesson.homework.completed ? "Complete" : "Incomplete"}</h2>
+				<ul>
+					{lesson.homework.tasks.map(taskLink)}
+				</ul>
+			</div>
 		</div>
 	)
 }
@@ -25,12 +59,17 @@ const LessonHistory = ({ lessonHistory }) => {
 
 class LessonHistoryContainer extends Component {
 	componentDidMount() {
-		this.props.fetchUsersLessonHistory(this.props.params.uid)
+		this.props.fetchUsersLessonHistory(this.props.uid)
 			.then((data) => console.log('hi', data))
 		console.log('cows', this.props)
 	}
 	
 	render() {
+		if (this.props.isFetching) {
+			console.log(Loading)
+			return <Loading />
+		}
+		
 		return (
 			<LessonHistory 
 				lessonHistory={this.props.lessonHistory}
@@ -40,13 +79,16 @@ class LessonHistoryContainer extends Component {
 }
 
 LessonHistoryContainer.propTypes = {
+	uid: PropTypes.string.isRequired,
 	lessonHistory: PropTypes.array,
 	fetchUsersLessonHistory: PropTypes.func.isRequired,
 }
 
-const mapStateToProps = (state, props) => ({
-	lessonHistory: state.usersLessonHistory[props.params.uid]
-		? state.usersLessonHistory[props.params.uid].history
+const mapStateToProps = ({ usersLessonHistory }, props) => ({
+	isFetching: usersLessonHistory.isFetching,
+	uid: props.uid || props.params.uid,
+	lessonHistory: usersLessonHistory[props.params.uid]
+		? usersLessonHistory[props.params.uid].history
 		: [],
 })
 

@@ -11,13 +11,25 @@
 
 /usersLessonHistory
 	[uid]
-		[hid]
-			hid
-			timestamp
-			record
-				Text
-				notes
-				homework
+		history: {
+			[hid]
+				hid
+				timestamp
+				title
+				notes: {
+
+				}
+				homework: {
+					completed: true
+					tasks: {
+						[tid]: {
+							tid
+							link
+							text
+						}
+					}					
+				}
+		}
 
 
 /usersCompletedWorksheets

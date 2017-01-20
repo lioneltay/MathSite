@@ -104,6 +104,8 @@ export class Answer extends Component {
 	displayBottomButton() {
 		if (!this.state.bottomButton && this.refs.answer && this.refs.answer.clientHeight > 500) {
 			this.setState({ bottomButton: true })
+		} else if (this.state.bottomButton && this.refs.answer && this.refs.answer.clientHeight <= 500) {
+			this.setState({ bottomButton: false })
 		}
 	}
 	

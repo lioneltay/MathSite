@@ -1,0 +1,27 @@
+.Lesson {
+	$padding-left: 15px;
+	padding: $padding-left;
+	
+	h1 {
+		font-size: 23px;
+		margin: 0;
+	}
+	
+	h2 {
+		font-size: 20px;
+		margin: 0;
+	}
+	
+	ul {
+		list-style-position: outside;
+		margin-left: $padding-left;
+		
+		li {
+			margin-left: 15px;
+			
+			a:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}

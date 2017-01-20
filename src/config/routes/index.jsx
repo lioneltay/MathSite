@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory, IndexRedirect } from 'react-router'
 import { BASE_URL } from 'config/constants'
 
 import worksheetRoutes from './worksheets'
@@ -35,7 +35,7 @@ const routes = (
 			<Route path='signout' component={Signout} />
 			
 			<Route path='profile/:uid' component={Profile}>
-				<IndexRoute component={LessonHistory} />
+				<IndexRedirect to='lessonhistory' />
 				<Route path='lessonhistory' component={LessonHistory} cows='moo'/>
 			</Route>
 			

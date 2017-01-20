@@ -23,18 +23,42 @@ const fetchingUsersLessonHistoryFailure = (error) => {
 
 // THUNKS
 //TODO MOVE THIS SOMEWHERE? UTIL FUNCTION
-function lessonHistoryArray(obj) {
-	return Object.keys(obj)
-		.sort((a,b) => obj[b].timestamp - obj[a].timestamp)
-		.map(key => obj[key])
+function formatUsersLessonHistory(data) {
+	const formattedHistory = {
+		...data,
+	}
+		
+	formattedHistory.history = Object.keys(data.history)
+		.sort((a,b) => data.history[b].timestamp - data.history[a].timestamp)
+		.map(key => formatLessonHistory(data.history[key]))
+		
+	return formattedHistory
+}
+
+function formatLessonHistory(history) {
+	return {
+		...history,
+		homework: formatLessonHomework(history.homework),
+	}
+}
+	
+function formatLessonHomework(homework) {
+	return {
+		...homework,
+		tasks: formatLessonTasks(homework.tasks),
+	}
+}
+
+function formatLessonTasks(tasks) {
+	return Object.keys(tasks).map(key => tasks[key])
 }
 
 export const fetchUsersLessonHistory = (uid) => (dispatch) => {
 	dispatch(fetchingUsersLessonHistory())
 	
 	return apiFetchUsersLessonHistory(uid)
-		.then(lessonHistory => lessonHistoryArray(lessonHistory))
-		.then(historyArray => dispatch(fetchingUsersLessonHistorySuccess(uid, historyArray)))
+		.then(lessonHistory => formatUsersLessonHistory(lessonHistory))
+		.then(formattedHistory => dispatch(fetchingUsersLessonHistorySuccess(uid, formattedHistory)))
 		.catch(error => dispatch(fetchingUsersLessonHistoryFailure(error)))
 }
 
@@ -65,7 +89,7 @@ export default function usersLessonHistory(state = initialUsersLessonHistoryStat
 				...state,
 				isFetching: false,
 				error: '',
-				[action.uid]: lessonHistory(state[action.uid], action),
+				[action.uid]: action.lessonHistory,
 			}
 		default:
 			return state
@@ -79,10 +103,6 @@ const initialLessonHistoryState = {
 function lessonHistory(state = initialLessonHistoryState, action) {
 	switch(action.type) {
 		case FETCHING_USERS_LESSON_HISTORY_SUCCESS:
-			return {
-				...state,
-				history: action.lessonHistory,
-			}
 		default:
 			return state
 	}

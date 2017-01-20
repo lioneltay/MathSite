@@ -3,6 +3,10 @@ Math Site for Tutoring
 
 *** TODOS ***
 
+-webpack resolve root scss import
+
+-circle spinner or a cool spinner google it
+
 -dynamic partsPerRow // FIX THIS, SPACING IS WEIRD
 
 

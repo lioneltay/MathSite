@@ -1,15 +1,19 @@
 import React, { PropTypes } from 'react'
-import { Link } from 'react-router'
+import { Link, IndexLink } from 'react-router'
 import './styles.scss'
 import { BASE_URL } from 'config/constants'
 import { signoutUser } from 'redux/modules/users'
 import { connect } from 'react-redux'
 
+const NavLink = (props) => (
+	<Link {...props} activeClassName='active-nav-link'/>
+)
+
 const LeftLinks = ({ admin }) => {
 	return (
 		<ul>
-			<li><Link to={BASE_URL}>Home</Link></li>
-			{ admin ? <li><Link to={`${BASE_URL}/admin`}>ADMIN</Link></li> : null }
+			<li><IndexLink to={BASE_URL}>Home</IndexLink></li>
+			{ admin ? <li><NavLink to={`${BASE_URL}/admin`}>ADMIN</NavLink></li> : null }
 		</ul>
 	)
 }
@@ -19,15 +23,15 @@ const RightLinks = ({ isAuthed, authedId }) => {
 		if (!authedId) console.warn('Error: No Authed Id')
 		return (
 			<ul>
-				<li><Link to={`${BASE_URL}/profile/${authedId}`}>Profile</Link></li>
-				<li><Link to={`${BASE_URL}/signout`}>Logout</Link></li>
+				<li><NavLink to={`${BASE_URL}/profile/${authedId}`}>Profile</NavLink></li>
+				<li><NavLink to={`${BASE_URL}/signout`}>Logout</NavLink></li>
 			</ul>
 		)
 	} else {
 		return (
 			<ul>
-				<li><Link to={`${BASE_URL}/signin`}>Login</Link></li>
-				<li><Link to={`${BASE_URL}/signup`}>Sign Up</Link></li>
+				<li><NavLink to={`${BASE_URL}/signin`}>Login</NavLink></li>
+				<li><NavLink to={`${BASE_URL}/signup`}>Sign Up</NavLink></li>
 			</ul>
 		)
 	}

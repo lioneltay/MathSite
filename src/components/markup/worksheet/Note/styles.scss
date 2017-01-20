@@ -3,8 +3,9 @@ $padding-left: 20px;
 .Note {
 	margin: 15px auto 0 auto;
 	padding: $padding-left;
-	border: 9px double grey;
+	border: 9px double #adadad;
 	width: 80%;
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
 	
 	ul {
 		list-style-position: outside;

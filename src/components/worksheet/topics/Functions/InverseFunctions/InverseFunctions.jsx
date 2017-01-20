@@ -11,7 +11,7 @@ const InverseFunctions = () => (
 		<Note>
 			<ul>
 				<li>
-					A function <T t='f(x)'/> has an inverse function, <T t='f^{-1}(x)'/>, if and only if it is one-to-one.
+					A <strong>function</strong> <T t='f(x)'/> has an <strong>inverse function</strong>, <T t='f^{-1}(x)'/>, if and only if it is one-to-one.
 				</li>
 				<li>
 					A function and its inverse are related geometrically by a reflect along the line <T t='y = x'/>
@@ -24,7 +24,7 @@ const InverseFunctions = () => (
 		
 		<Question partsPerRow={2} number={1}>
 			<Description>
-				For each of the following functions find the inverse <T t='f^{-1}'/> and sketch both <T t='f'/> and <T t='f^{-1}'/>.
+				For each of the following <strong>functions</strong> find the inverse <T t='f^{-1}'/> and sketch both <T t='f'/> and <T t='f^{-1}'/>.
 				<div>(<em>Contemplate:</em> How does the inverse change when you transform the original function?)</div>
 			</Description>
 			<Part number='a'><T t='f(x) = x'/></Part>
@@ -45,7 +45,7 @@ const InverseFunctions = () => (
 		
 		<Question partsPerRow={2} number={2}>
 			<Description>
-				For each of the following functions find the inverse <T t='f^{-1}'/>, and sketch both <T t='f'/> and <T t='f^{-1}'/>. Also write down the domain and ranges of each function and its inverse.
+				For each of the following <strong>functions</strong> find the inverse <T t='f^{-1}'/>, and sketch both <T t='f'/> and <T t='f^{-1}'/>. Also write down the domain and ranges of each function and its inverse.
 			</Description>
 			<Part number='a'><T t='f(x) = \sqrt{x}'/></Part>
 			<Part number='b'><T t='f: [0, \infty), f(x) = x^2'/></Part>

@@ -2,13 +2,9 @@ Math Site for Tutoring
 
 
 *** TODOS ***
--deployment
 
--dynamic partsPerRow
+-dynamic partsPerRow // FIX THIS, SPACING IS WEIRD
 
--answers markup
-	-only for questions not assignments
-	-toggle
 
 -allow parts to collapse when screen is too small
 

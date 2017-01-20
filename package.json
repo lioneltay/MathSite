@@ -2,12 +2,13 @@
   "name": "MathSite",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/app.js",
   "scripts": {
     "clean": "rimraf dist",
     "build": "set NODE_ENV=production && npm run clean && webpack -p",
     "devbuild": "npm run clean && webpack",
-    "serve": "webpack-dev-server"
+    "serve": "webpack-dev-server",
+		"serverbuild": "set NODE_ENV=production && npm run clean && webpack"
   },
   "keywords": [],
   "author": "",

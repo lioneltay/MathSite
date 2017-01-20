@@ -3,6 +3,9 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import webpack from 'webpack'
 
+const NPM_LAUNCH_COMMAND = process.env.npm_lifecycle_event
+const SERVER_BUILD = NPM_LAUNCH_COMMAND === 'serverbuild'
+
 const VENDOR_LIBS = [
 	'react',
 	'redux', 
@@ -20,7 +23,7 @@ const config = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].[chunkhash].js',
-		publicPath: '/',
+		publicPath: SERVER_BUILD ? '/MathSite/dist' : '/',
 	},
 	resolve: {
 		modules: [path.resolve(__dirname, "src"), "node_modules"],
@@ -69,6 +72,7 @@ const config = {
 	devServer: {
 		contentBase: path.resolve(__dirname, 'dist'),
 		historyApiFallback: true,
+		hot: false,
 	},
 }
 

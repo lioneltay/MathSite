@@ -35,6 +35,52 @@
 	}	
 }
 
+.Answer {
+	$shadow-width: 10px;
+	position: relative;
+	box-shadow: inset 0 0 $shadow-width 1px #5c9ace;
+	border-radius: 5px;
+	background: #e1f0ff;
+	margin-top: 15px;
+	padding: 3*$shadow-width 0;
+	
+	.Question {
+		margin-top: 0;
+	}
+	
+	.toggle-answer-top {
+		display: block;
+		position: absolute;
+		top: 0px;
+		right: 15px;
+		z-index: 1;
+		margin-top: -2*$shadow-width;
+	}
+	
+	.toggle-answer-bottom {
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		right: 15px;
+		z-index: 1;
+		margin-bottom: -2*$shadow-width;
+	}
+}
+
+.toggle-answer {
+	color: blue;
+	font-size: 0.9em
+}
+.toggle-answer:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.toggle-answer-top, .toggle-answer-bottom {
+	@extend .toggle-answer;
+}
+
+
 @media (min-width:1200px){
     .auto-clear .col-lg-1:nth-child(12n+1){clear:left;}
     .auto-clear .col-lg-2:nth-child(6n+1){clear:left;}

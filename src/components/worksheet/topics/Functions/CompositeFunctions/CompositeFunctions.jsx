@@ -1,6 +1,6 @@
 import React from 'react'
 import { Tex as T } from 'MathJax'
-import { Question, Description, Part, Note } from 'components/markup/worksheet'
+import { Question, Description, Part, Note, Answer } from 'components/markup/worksheet'
 
 const CompositeFunctions = () => (
 	<div className='MathMarkup'>
@@ -30,6 +30,13 @@ const CompositeFunctions = () => (
 				<div><T t='f(x) = x^2 + 3x'/></div>
 				<div><T t='g(x) = 2x + 3'/></div>
 			</Part>
+			
+			<Answer number={1} show={true}>
+				<Description>Answers</Description>
+				<Part><T t='h(x) = 2(3x) + 1 = 6x + 1'/></Part>
+				<Part><T t='h(x) = 2(x^2 + 1) - 1 = 2x^2 + 1'/></Part>
+				<Part><T t='h(x) = (2x + 3)^2 + 3x = 4x^2 + 15x + 9'/></Part>
+			</Answer>
 		</Question>
 		
 		<Note>
@@ -58,6 +65,24 @@ const CompositeFunctions = () => (
 				<div><T t='f(x) = \sqrt{3 - x}'/></div>
 				<div><T t='g(x) = x^2'/></div>
 			</Part>
+			
+			<Answer number={2} show={true}>
+				<Description>Answers</Description>
+				<Part>
+					<div><T t='\text{domain}(f) = \mathbb{R}\backslash\{0\}'/>,<T t='\quad'/><T t='\text{range}(f) = \mathbb{R}\backslash\{0\}'/></div>
+					<div><T t='\text{domain}(g) = \mathbb{R}'/>,<T t='\quad'/><T t='\text{range}(g) = [1,\infty)'/></div>
+					<br />
+					<div><T t='f(g(x)) = \frac{1}{(x^2 + 1)^2}'/> exists since <T t='\text{range}(g) \subseteq \text{domain}(f)'/></div>
+					<div><T t='g(f(x)) = \frac{1}{x^4} + 1'/> exists since <T t='\text{range}(f) \subseteq \text{domain}(g)'/></div>
+				</Part>
+				<Part>
+					<div><T t='\text{domain}(f) = (-\infty,3]'/>,<T t='\quad'/><T t='\text{range}(f) = [0, \sqrt{3}]'/></div>
+					<div><T t='\text{domain}(g) = \mathbb{R}'/>,<T t='\quad'/><T t='\text{range}(g) = [0,\infty)'/></div>
+					<br />
+					<div><T t='f(g(x))'/> does <strong>not</strong> exists since <T t='\text{range}(g) = [0, \infty) \not\subseteq [0,3] = \text{domain}(f)'/></div>
+					<div><T t='g(f(x)) = 3-x'/> exists since <T t='\text{range}(f) \subseteq \text{domain}(g)'/></div>
+				</Part>
+			</Answer>
 		</Question>
 		
 		<Note>
@@ -67,7 +92,7 @@ const CompositeFunctions = () => (
 					<T t='\text{domain}(h) = \text{domain}(g)'/> as any input to <T t='h'/> must be an 'input-able' in <T t='g'/>.
 				</li>
 				<li>
-					<T t='\text{range}(h) \subseteq \text{range}(f)'/> since what comes out of <T t='h'/> is what comes out of <T t='f'/> but with more restrictions since the input <T t='f'/> is restricted to the range of <T t='g'/>.
+					<T t='\text{range}(h) \subseteq \text{range}(f)'/> since what comes out of <T t='h'/> is what comes out of <T t='f'/> but with more restrictions since the input to <T t='f'/> is restricted to the range of <T t='g'/>.
 				</li>
 			</ul>
 		</Note>
@@ -89,13 +114,35 @@ const CompositeFunctions = () => (
 				<div><T t='f(x) = \sqrt{3 - x}'/></div>
 				<div><T t='g(x) = x^2'/></div>
 			</Part>
+			
+			<Answer number={3} show={true}>
+				<Description>Answers</Description>
+				<Part>
+					<div><T t='\text{domain}(f) = \mathbb{R}\backslash\{0\}'/>,<T t='\quad'/><T t='\text{range}(f) = \mathbb{R}\backslash\{0\}'/></div>
+					<div><T t='\text{domain}(g) = \mathbb{R}'/>,<T t='\quad'/><T t='\text{range}(g) = [1,\infty)'/></div>
+					<br />
+					<div><T t='h(x) = f(g(x)) = \frac{1}{(x^2 + 1)^2}'/> exists since <T t='\text{range}(g) \subseteq \text{domain}(f)'/></div>
+					<br />
+					<div>From looking at the equation of <T t='h'/> we can see that,</div>
+					<div><T t='\text{domain}(h) = \mathbb{R}'/>,<T t='\quad'/><T t='\text{range}(h) = (0,1]'/></div>
+					<br/>
+					<div>(<em>Note that <T t='\text{domain}(h) = \text{domain}(g)'/> and <T t='\text{range}(h) \subseteq \text{range}(f)'/></em></div>
+				</Part>
+				
+				<Part>
+					<div><T t='\text{domain}(f) = (-\infty,3]'/>,<T t='\quad'/><T t='\text{range}(f) = [0, \sqrt{3}]'/></div>
+					<div><T t='\text{domain}(g) = \mathbb{R}'/>,<T t='\quad'/><T t='\text{range}(g) = [0,\infty)'/></div>
+					<br />
+					<div><T t='h(x) = f(g(x))'/> does <strong>not</strong> exists since <T t='\text{range}(g) = [0, \infty) \not\subseteq [0,3] = \text{domain}(f)'/> so it does not make sense to talk about the domain and range of <T t='h'/></div>
+				</Part>
+			</Answer>
 		</Question>
 		
 		<Note>
 			Suppose we want to find <T t='h(x) = f(g(x))'/>. If <T t='\text{range}(g) \not\subseteq \text{domain}(f)'/> then we know that <T t='h'/> does not exist. Instead we can create a new function <T t='g^*'/> by restricting the domain of <T t='g'/>, which in turn will restrict the range, such that hopefully <T t='\text{range}(g*) \subseteq \text{domain}(f)'/> so  that <T t='h^*(x) = f(g^*(x))'/> exists instead.
 		</Note>
 		
-		<Question partsPerRow={2} number='4'>
+		<Question partsPerRow={1} number='4'>
 			<Description>
 				Attempt to find <T t='h(x) = f(g(x))'/>, if necessary create a new function <T t='g^*'/> by restricting the domain of <T t='g'/> and find <T t='h^*(x) = f(g^*(x))'/> instead. Otherwise, state why <T t='h'/> and <T t='h^*'/> do not exist.
 			</Description>
@@ -116,6 +163,23 @@ const CompositeFunctions = () => (
 				<div><T t='g(x) = x^2 + 1'/></div>
 				<div>(<em>Hint:</em> refer to previous part, what do you really care about <T t='f'/>?)</div>
 			</Part>
+			
+			<Answer number={3} show={true}>
+				<Description>Answers</Description>
+								
+				<Part>TODO</Part>
+				<Part>TODO</Part>
+				
+				<Part>
+					<div><T t='f(g(x)'/> does not exist since <T t='\text{range}(g) = [1,\infty) \not\subseteq (-\infty,5] = \text{domain}(f)'/></div>
+					<br />
+					<div>If we create <T t='g^*: [-2,2] \rightarrow \mathbb{R}, g^*(x) = x^2 + 1'/> then <T t='\text{range}(g^*) = [1,5] \subseteq (-\infty,5] = \text{domain}(f)'/> so that <T t='f(g^*(x)) = x^2 + 1'/> exists for <T t='x \in [-2,2]'/>.</div>
+				</Part>
+				
+				<Part>
+					<div>We only care about the domain of <T t='f'/> which has not changed so we know that <T t='f(g(x))'/> still exists with the same <T t='g^*'/> from part c. We then find that <T t='h^*(x) = (x^2+1)^{774} - sin(x^2 + 1)'/> for <T t='x \in [-2,2]'/>.</div>
+				</Part>
+			</Answer>
 		</Question>
 		
 		

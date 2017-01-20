@@ -19,14 +19,3 @@ ReactDOM.render(
 	</Provider>,
 	document.querySelector('#app')
 )
-
-
-
-
-// DELETE
-
-//import { ref } from 'config/constants'
-//
-//for (let i = 1; i <= 5; i++) {
-//	ref.child(`usersLessonHistory/3KlTmpjnSxgg0uspCFt5DJ2QLXk1/${i}/record/text`).set(`lesson${i}`)
-//}

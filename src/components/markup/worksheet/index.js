@@ -1,2 +1,2 @@
-export { Question, Description, Part } from './question/'
+export { Question, Description, Part, Answer } from './question/'
 export Note from './Note/Note'

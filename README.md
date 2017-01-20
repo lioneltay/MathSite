@@ -25,7 +25,6 @@ Math Site for Tutoring
 
 -currculum page with checklist
 
--some css for making topic pages / worksheets
 
 -progress tracker, module/topic/worksheet completion
 

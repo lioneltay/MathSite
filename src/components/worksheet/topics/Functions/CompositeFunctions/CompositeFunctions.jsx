@@ -31,7 +31,7 @@ const CompositeFunctions = () => (
 				<div><T t='g(x) = 2x + 3'/></div>
 			</Part>
 			
-			<Answer number={1} show={true}>
+			<Answer number='1' show={true}>
 				<Description>Answers</Description>
 				<Part><T t='h(x) = 2(3x) + 1 = 6x + 1'/></Part>
 				<Part><T t='h(x) = 2(x^2 + 1) - 1 = 2x^2 + 1'/></Part>
@@ -66,7 +66,7 @@ const CompositeFunctions = () => (
 				<div><T t='g(x) = x^2'/></div>
 			</Part>
 			
-			<Answer number={2} show={true}>
+			<Answer number='2' show={true}>
 				<Description>Answers</Description>
 				<Part>
 					<div><T t='\text{domain}(f) = \mathbb{R}\backslash\{0\}'/>,<T t='\quad'/><T t='\text{range}(f) = \mathbb{R}\backslash\{0\}'/></div>
@@ -115,7 +115,7 @@ const CompositeFunctions = () => (
 				<div><T t='g(x) = x^2'/></div>
 			</Part>
 			
-			<Answer number={3} show={true}>
+			<Answer number='3' show={true}>
 				<Description>Answers</Description>
 				<Part>
 					<div><T t='\text{domain}(f) = \mathbb{R}\backslash\{0\}'/>,<T t='\quad'/><T t='\text{range}(f) = \mathbb{R}\backslash\{0\}'/></div>
@@ -164,11 +164,20 @@ const CompositeFunctions = () => (
 				<div>(<em>Hint:</em> refer to previous part, what do you really care about <T t='f'/>?)</div>
 			</Part>
 			
-			<Answer number={3} show={true}>
+			<Answer number='4' show={true}>
 				<Description>Answers</Description>
 								
-				<Part>TODO</Part>
-				<Part>TODO</Part>
+				<Part>
+					<div><T t='f(g(x)'/> exists since <T t='\text{range}(g) = [0,3] \subseteq [0,\infty) = \text{domain}(f)'/></div>
+					<br />
+					<div><T t='f(g(x) = (\sqrt{9 - x} - 1)^2'/> for <T t='x \in [0,3]'/>.</div>
+				</Part>
+				
+				<Part>
+					<div><T t='f(g(x)'/> does not exists since <T t='\text{range}(g) = (-\infty,0] \not\subseteq [1,\infty) = \text{domain}(f)'/>.</div>
+					<br />
+					<div>Furthermore, <T t='\text{range}(g) \cap \text{domain}(f) = \emptyset'/> so there is no restriction, <T t='g^*'/>, of <T t='g'/>, such that <T t='h^*(x) = f(g^*(x))'/> would exist (none of the outputs of <T t='g'/> are valid inputs of <T t='f'/>).</div>
+				</Part>
 				
 				<Part>
 					<div><T t='f(g(x)'/> does not exist since <T t='\text{range}(g) = [1,\infty) \not\subseteq (-\infty,5] = \text{domain}(f)'/></div>

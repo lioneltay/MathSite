@@ -96,7 +96,7 @@ export class Answer extends Component {
 		super(props)
 		
 		this.state = { 
-			reveal: true,
+			reveal: false,
 			bottomButton: false,
 		}
 	}
@@ -140,7 +140,7 @@ export class Answer extends Component {
 			<div>
 				<div style={{display: this.state.reveal ? null : 'none'}} ref='answer' className='Answer'>
 					{this.toggleButton('Hide Answers', 'toggle-answer-top')}
-					<Question number={this.props.number} partsPerRow={this.props.partsPerRow}>
+					<Question number={''} partsPerRow={this.props.partsPerRow}>
 						{this.props.children}
 					</Question>
 					{this.state.bottomButton
@@ -154,6 +154,11 @@ export class Answer extends Component {
 		)
 	}
 	
+}
+
+Answer.propTypes = {
+	show: PropTypes.bool.isRequired,
+	number: PropTypes.string.isRequired,
 }
 
 Answer.defaultProps = {

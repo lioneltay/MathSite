@@ -124,12 +124,16 @@ const InverseFunctions = () => (
 		</Question>
 		
 		<Question number='3'>
-			<Description>Let <T t='f(x) = \frac{x + 4}{3x - 1}'/></Description>
-			<Part>Show that <T t='f \circ f'/> is defined.</Part>
-			<Part>Find <T t='f \circ f'/>.</Part>
+			<Description>
+				Let <T t='f(x) = \frac{x + 4}{3x - 1}'/> (<em>Mobius Transform</em>)
+			</Description>
+			<Part>
+				<div>Show that <T t='f \circ f'/> is defined.</div>
+				<div><em>Hint:</em> It may help to write <T t='f(x)'/> in the form <T t='f(x) = \frac{1}{a} + \frac{b}{3x - 1}'/>.</div>
+			</Part>
+			<Part>Find <T t='f \circ f'/>, stating its domain and range.</Part>
 			<Part>
 				<div>Write down <T t='f^{-1}(x)'/>.</div>
-				<div><em>Mobius Transform</em></div>
 			</Part>
 		</Question>
 		

@@ -5,7 +5,7 @@ import './styles.scss'
 class ProfileContainer extends Component {
 	render() {
 		return (
-			<div className='cow'>
+			<div>
 				<ProfileNav
 					params={this.props.params}
 				/>

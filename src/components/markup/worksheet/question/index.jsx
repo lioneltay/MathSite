@@ -11,7 +11,7 @@ export function Question({ children, number, partsPerRow }) {
 	function partToComp(part, index, width) {
 		// indices should begin at 0 and be sequential
 		return (
-			<div className={`col-xs-${width} col-sm-${width} col-md-${width} col-lg-${width}`} key={index}>
+			<div className={`col-xs-${12} col-sm-${12} col-md-${width} col-lg-${width}`} key={index}>
 				<Part {...part.props} number={String.fromCharCode(97 + index)} />
 			</div>
 		)

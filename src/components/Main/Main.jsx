@@ -1,8 +1,9 @@
 import React, { PropTypes, Component } from 'react'
-import { Navigation } from 'components'
+import { Navigation, Footer } from 'components'
 import { Main } from 'components'
 import { connect } from 'react-redux'
 import { checkAuth } from 'redux/modules/users'
+import { Spinner } from 'components/spinner'
 import './styles.scss'
 
 class MainContainer extends Component {
@@ -15,22 +16,38 @@ class MainContainer extends Component {
 	}
 	
 	render() {
+		if (this.props.isFetching) {
+			return (
+				<Spinner fullscreen={true} />
+			)
+		}
+		
 		return (
 			<div className='Main'>
-				<Navigation />
-				{this.props.children}
+				<header>
+					<nav>
+						<Navigation />
+					</nav>
+				</header>
+				
+				<section>
+					{this.props.children}
+				</section>
+				
+				<footer>
+					<Footer />
+				</footer>				
 			</div>
 		)
 	}
 }
 
 MainContainer.propTypes = {
-	isAuthed: PropTypes.bool.isRequired,
+	isFetching: PropTypes.bool.isRequired,
 }
 
-const mapStateToProps = (state) => ({
-	isAuthed: state.users.isAuthed,
-	authedId: state.users.authedId,
+const mapStateToProps = ({ users }) => ({
+	isFetching: users.isFetching,
 })
 
 export default connect(

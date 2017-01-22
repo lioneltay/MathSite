@@ -3,15 +3,11 @@ import { Router, Route, IndexRoute, browserHistory, IndexRedirect } from 'react-
 import { BASE_URL } from 'config/constants'
 
 import worksheetRoutes from './worksheets'
+import profileRoutes from './profile'
 
 import { Main } from 'components'
 // The home page is currently the worksheet page, can easily be changed
 import { Home } from 'components/worksheet'
-
-import {
-	Profile,
-	LessonHistory,
-} from 'components/profile/'
 
 import {
 	Signup,
@@ -34,10 +30,7 @@ const routes = (
 			<Route path='signin' component={Signin} />
 			<Route path='signout' component={Signout} />
 			
-			<Route path='profile/:uid' component={Profile}>
-				<IndexRedirect to='lessonhistory' />
-				<Route path='lessonhistory' component={LessonHistory} cows='moo'/>
-			</Route>
+			{profileRoutes}
 			
 			{worksheetRoutes}
 			

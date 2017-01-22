@@ -1,8 +1,6 @@
 import firebase from 'firebase'
 
-export const BASE_URL = '/math'
-export const WORKSHEETS_URL = 'worksheets'
-
+// FIREBASE
 const appConfig = {
 	apiKey: "AIzaSyACypH4o2TFCn-oNdbKQchtF8AyQHUNnV4",
 	authDomain: "mathsite-e9273.firebaseapp.com",
@@ -23,3 +21,17 @@ firebase.initializeApp(devConfig)
 
 export const ref = firebase.database().ref()
 export const firebaseAuth = firebase.auth
+
+// URL
+export const BASE_URL = '/math'
+export const WORKSHEETS_URL = 'worksheets'
+export const PROFILE_URL = 'profile'
+
+// LINKS
+function getLink() {
+	
+}
+
+const links = {
+	
+}

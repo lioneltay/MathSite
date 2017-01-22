@@ -19,17 +19,12 @@ export function fetchUser(uid) {
 
 // LESSON HISTORY
 
-//export function fetchUsersLessonHistory(uid) {
-//	return ref.child(`usersLessonHistory/${uid}`).once('value')
-//		.then(snapshot => snapshot.val())
-//}
-
 const history = {
 	history: {
 		1: {
-			hid: 1,
-			timestamp: 0,
-			title: 'Lesson 31/12',
+			lessonId: 1,
+			timestamp: Date.now(),
+			title: 'Nugget City',
 			homework: {
 				completed: false,
 				tasks: {
@@ -50,9 +45,9 @@ const history = {
 			}
 		},
 		2: {
-			hid: 2,
-			timestamp: 2,
-			title: 'Lesson 27/12',
+			lessonId: 2,
+			timestamp: Date.now(),
+			title: 'Vectors',
 			homework: {
 				completed: true,
 				tasks: {
@@ -71,15 +66,45 @@ const history = {
 					}
 				}
 			}
-		}
+		},
+		3: {
+			lessonId: 3,
+			timestamp: Date.now(),
+			title: 'A Fun Time',
+			homework: {
+				completed: true,
+				tasks: {
+					1: {
+						tid: 1,
+						link: {
+							external: false,
+							url: 'http://localhost:8080/math/worksheets/Functions/InverseFunctions',
+						},
+						text: 'Inverse Functions Worksheet'
+					},
+					2: {
+						tid: 2,
+						link: false,
+						text: 'Climb Mount Everest',
+					}
+				}
+			}
+		},
 	}
 }
 
 export function fetchUsersLessonHistory(uid) {
-	return new Promise((resolve, reject) => {
-		setTimeout(() => resolve(history), 3000)
-	})
+	return ref.child(`usersLessonHistory/${uid}`).once('value')
+		.then(snapshot => snapshot.val())
 }
+
+//export function fetchUsersLessonHistory(uid) {
+//	ref.child(`usersLessonHistory/${uid}`).set(history)
+//		.then((data) => console.log('Done!', data))
+//	return new Promise((resolve, reject) => {
+//		setTimeout(() => resolve(history), 3000)
+//	})
+//}
 
 /*
 /usersLessonHistory

@@ -19,17 +19,33 @@ class Spinner extends Component {
 		if (this.props.width.match(/\d+%/)) return this.props.width
 	}
 	
+	fullscreenStyles() {
+		
+	}
+	
 	getStyles() {
-		return {
-			width: this.props.width, 
-			paddingTop: this.paddingFromWidth(),
-			height: this.heightFromWidth(),
+		if (!this.props.fullscreen) {
+			return {
+				width: this.props.width, 
+				paddingTop: this.paddingFromWidth(),
+				height: this.heightFromWidth(),
+			}
+		}
+		
+		return {}
+	}
+	
+	getClass() {
+		if (this.props.fullscreen) {
+			return 'fullscreen-spinner'
+		} else {
+			return 'spinner'
 		}
 	}
 	
 	render() {		
 		return (
-			<div style={this.getStyles()} className='spinner'></div>
+			<div style={this.getStyles()} className={this.getClass()}></div>
 		)
 	}
 }
@@ -39,7 +55,10 @@ Spinner.defaultProps = {
 }
 
 Spinner.propTypes = {
-	width: PropTypes.string.isRequired,
+	width: PropTypes.string,
+	fullscreen: PropTypes.bool,
 }
 
 export default Spinner
+
+

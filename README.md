@@ -3,26 +3,23 @@ Math Site for Tutoring
 
 *** TODOS ***
 
--do isFetching
--animate everything
+-investigate hot module reloader
+-webpack resolve root scss import
 
 -implement lesson history
 	-lesson details page
 	-lesson takes props or router params
 	-add lesson feature, only available to admin
-	
--allow parts to collapse when screen is too small
 
--fix TOPIC title / number overflow just like for subtopics
+-think of a good way to save markup to firebase
 
 ---
 
--webpack resolve root scss import
+
 
 -dynamic partsPerRow // FIX THIS, SPACING IS WEIRD
 
 -notes default styles and structure
-
 
 
 

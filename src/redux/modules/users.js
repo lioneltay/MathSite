@@ -90,7 +90,7 @@ export const signinUser = (email, password) => (dispatch) => {
 
 // Reducers
 const initialUsersState = {
-	isFetching: false,
+	isFetching: true, // true since we will always begin the app by checking for a user
 	error: '',
 	authedId: null,
 	isAuthed: false,

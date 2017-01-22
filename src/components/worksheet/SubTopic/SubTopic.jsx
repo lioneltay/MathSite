@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 import { BASE_URL } from 'config/constants'
+import './styles.scss'
 
 const SubTopic = (props) => {
 	const internals = [

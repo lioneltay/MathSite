@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import { Topic, SubTopic, Contents } from 'components/worksheet'
 import { BASE_URL, WORKSHEETS_URL } from 'config/constants'
+import './styles.scss'
 
 const Home = () => (
 	<div className='Home'>

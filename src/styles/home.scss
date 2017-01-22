@@ -1,38 +1,6 @@
 
 
-.Home h1 {
-	color: #467FAF;
-}
 
-.Topic {
-}
 
-.Topic h2 {
-	font-size: 20px;
-	font-weight: 700;
-	color: $blue;
-}
 
-.SubTopic {
-	margin: 2px 0;
-	font-weight: 700;
-	display: flex;
-	
-	div:first-child {
-		width: 0%;
-		min-width: 25px;
-		margin-right: 10px;
-		text-align: right;
-		
-		a {
-			color: $blue;
-		}
-		
-	}
-	
-	div:nth-child(2) {
-		a {
-			color: grey;
-		}
-	}
-}
+

@@ -1,6 +1,7 @@
 .Lesson {
 	$padding-left: 15px;
 	padding: $padding-left;
+	margin: 10px;
 	
 	h1 {
 		font-size: 23px;
@@ -26,5 +27,7 @@
 	}
 }
 
-
+.LessonSnippet {
+	cursor: pointer;
+}
 

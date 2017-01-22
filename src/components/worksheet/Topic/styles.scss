@@ -1,0 +1,14 @@
+$blue: #4E84B1;
+
+.Topic {
+	h2 {
+		display: flex;
+		font-size: 20px;
+		font-weight: 700;
+		color: $blue;
+		
+		.number {
+			margin-right: 10px;
+		}
+	}
+}

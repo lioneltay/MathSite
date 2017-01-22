@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchUsersLessonHistory } from 'redux/modules/usersLessonHistory'
 import { Link } from 'react-router'
-import { Loading } from 'components/spinner'
+import { Loading, Spinner } from 'components/spinner'
 import './styles.scss'
 
 const Lesson = ({ lesson }) => {
@@ -67,7 +67,11 @@ class LessonHistoryContainer extends Component {
 	render() {
 		if (this.props.isFetching) {
 			console.log(Loading)
-			return <Loading />
+			return (
+				<div className='center-contents-vh bob'>
+					<Spinner width='100px' />
+				</div>
+			)
 		}
 		
 		return (

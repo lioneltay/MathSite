@@ -3,6 +3,7 @@ import { Navigation } from 'components'
 import { Main } from 'components'
 import { connect } from 'react-redux'
 import { checkAuth } from 'redux/modules/users'
+import './styles.scss'
 
 class MainContainer extends Component {
 	componentDidMount() {

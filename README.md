@@ -3,21 +3,26 @@ Math Site for Tutoring
 
 *** TODOS ***
 
--webpack resolve root scss import
+-do isFetching
+-animate everything
 
--circle spinner or a cool spinner google it
-
--dynamic partsPerRow // FIX THIS, SPACING IS WEIRD
-
-
+-implement lesson history
+	-lesson details page
+	-lesson takes props or router params
+	-add lesson feature, only available to admin
+	
 -allow parts to collapse when screen is too small
-
--notes default styles and structure
 
 -fix TOPIC title / number overflow just like for subtopics
 
+---
 
--lesson history
+-webpack resolve root scss import
+
+-dynamic partsPerRow // FIX THIS, SPACING IS WEIRD
+
+-notes default styles and structure
+
 
 
 
@@ -26,6 +31,8 @@ Math Site for Tutoring
 -user profile with details
 -test results
 -lesson history with topics / notes
+
+-?store topics in database, add topics through the app rather than markup
 
 -currculum page with checklist
 

@@ -4,41 +4,27 @@ import './styles.scss'
 import { BASE_URL, PROFILE_URL } from 'config/constants'
 import { formatDate } from 'helpers/format'
 
-function taskLink(task, key) {
-	let item = task.text
-
-	if (task.link) {
-		if (task.link.external) {
-			item = <a href={task.link.url}>{task.text}</a>
-		} else {
-			item = <Link to={task.link.url}>{task.text}</Link>
-		}
-	}
-
-	return (
-		<li key={key}>
-			<div>
-				{item}
-			</div>
-		</li>
-	)
-}
-
 function title(lesson) {
 	return `${formatDate(new Date(lesson.timestamp))} - ${lesson.title}`
 }
 
 
-
+const LessonLink = ({ link }) => (
+	<li>
+		{link.external
+			? <a href={link.url}>{link.linkText}</a>
+			: <Link to={link.url}>{link.linkText}</Link>}
+		{` - ${link.description}`} 
+	</li>
+)
 
 
 const LessonSnippet = ({ lesson, toggleDetail }) => {
 	return (
 		<div className='LessonSnippet' onClick={toggleDetail}>
 			<h1>{title(lesson)}</h1>
-			<div>
-				<h2>Homework - {lesson.homework.completed ? "Complete" : "Incomplete"}</h2>
-			</div>
+			<h2>Homework - {lesson.homework.completed ? "Complete" : "Incomplete"}</h2>
+			<div dangerouslySetInnerHTML={{ __html: lesson.snippet.html }} />
 		</div>
 	)
 }
@@ -56,13 +42,15 @@ const LessonDetail = ({ lesson, toggleDetail }) => {
 		<div className='LessonDetail'>
 			<h1>{title(lesson)}</h1>
 			<div>
+				<h2>Notes</h2>
+				<div dangerouslySetInnerHTML={{ __html: lesson.notes.html }} />
 				<h2>Homework - {lesson.homework.completed ? "Complete" : "Incomplete"}</h2>
-				<ul>
-					{lesson.homework.tasks.map(taskLink)}
-				</ul>
+				<div dangerouslySetInnerHTML={{ __html: lesson.homework.html }} />
+				<h2>Links</h2>
+				<ul>{lesson.links.map(link => <LessonLink key={link.linkId} link={link}/>)}</ul>
 			</div>
-			<div onClick={toggleDetail}>
-				less detail
+			<div className='less-detail text-right' onClick={toggleDetail}>
+				<a>collapse</a>
 			</div>
 		</div>
 	)

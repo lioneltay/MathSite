@@ -1,7 +1,12 @@
+$padding-h: 15px;
+$padding-top: 15px;
+$padding-bottom: 20px;
+$margin-h: 10px;
+$margin-v: 10px;
+
 .Lesson {
-	$padding-left: 15px;
-	padding: $padding-left;
-	margin: 10px;
+	padding: $padding-h;
+	margin: $margin-v $margin-h;
 	
 	h1 {
 		font-size: 23px;
@@ -15,7 +20,7 @@
 	
 	ul {
 		list-style-position: outside;
-		margin-left: $padding-left;
+		margin-left: $padding-h;
 		
 		li {
 			margin-left: 15px;
@@ -29,5 +34,19 @@
 
 .LessonSnippet {
 	cursor: pointer;
+}
+
+.LessonDetail {
+	position: relative;
+	
+	.less-detail {
+		position: absolute;
+		bottom: -$padding-bottom;
+		right: 0;
+	}
+	
+	.less-detail:hover {
+		cursor: pointer;
+	}
 }
 

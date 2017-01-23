@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server/app.js",
+	"repository": {
+    "type": "git",
+    "url": "https://github.com/lioneltay/MathSite"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "build": "set NODE_ENV=production && npm run clean && webpack -p",
@@ -11,7 +15,7 @@
     "serverbuild": "set NODE_ENV=production && npm run clean && webpack"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lionel Tay",
   "license": "ISC",
   "dependencies": {
     "firebase": "^3.6.5",
@@ -30,6 +34,7 @@
     "babel-loader": "^6.2.9",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",

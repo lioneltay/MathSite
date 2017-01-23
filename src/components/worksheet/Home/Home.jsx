@@ -13,10 +13,18 @@ const Home = () => (
 			</Topic>
 			
 			<Topic name='Functions'>
+				<SubTopic name='Function Properties' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/FunctionProperties`}/>
 				<SubTopic name='Composite Functions' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/CompositeFunctions`}/>
 				<SubTopic name='Inverse Functions' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/InverseFunctions`}/>				
+				<SubTopic name='Power Functions' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/PowerFunctions`}/>							
 				<SubTopic name='Absolute Value Functions [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/AbsoluteValueFunctions`}/>
 				<SubTopic name='Reciprocal Functions [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/ReciprocalFunctions`}/>
+			</Topic>
+			
+			<Topic name='Transformations'>
+				<SubTopic name='Types Of Transfomations' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/TypesOfTransformations`}/>				
+				<SubTopic name='Transfomations (Implicit)' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/Transformations`}/>				
+				<SubTopic name='Matrix Transfomations (Explicit)' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/TransformationsMatrix`}/>	
 			</Topic>
 			
 			<Topic name='Coordinate Geometry'>

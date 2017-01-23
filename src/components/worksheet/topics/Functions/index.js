@@ -2,3 +2,5 @@ export AbsoluteValueFunctions from './AbsoluteValueFunctions/AbsoluteValueFuncti
 export ReciprocalFunctions from './ReciprocalFunctions/ReciprocalFunctions'
 export CompositeFunctions from './CompositeFunctions/CompositeFunctions'
 export InverseFunctions from './InverseFunctions/InverseFunctions'
+export PowerFunctions from './PowerFunctions/PowerFunctions'
+export FunctionProperties from './FunctionProperties/FunctionProperties'

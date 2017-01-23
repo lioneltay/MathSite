@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { fetchUsersLessonHistory } from 'redux/modules/usersLessonHistory'
 import { Link } from 'react-router'
 import { Loading, Spinner } from 'components/spinner'
-import { Lesson, AddLesson } from 'components/profile'
+import { Lesson, AddEditLesson } from 'components/profile'
 
 const LessonHistory = ({ lessonHistory, uid }) => {
 	return (
@@ -32,7 +32,7 @@ class LessonHistoryContainer extends Component {
 				<LessonHistory 
 					lessonHistory={this.props.lessonHistory}
 				/>
-				<AddLesson />
+				<AddEditLesson />
 			</div>
 		)
 	}

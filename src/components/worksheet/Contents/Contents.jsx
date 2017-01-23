@@ -14,10 +14,10 @@ const Contents = ({ children }) => {
 		if (index % 2 === 0) {
 			rows.push((
 				<div key={index} className='row'>
-					<div className='col-sm-6'>
+					<div className='col-md-6 col-sm-12'>
 						{children[index]}
 					</div>
-					<div className='col-sm-6'>
+					<div className='col-md-6 col-sm-12'>
 						{children[index + 1]}
 					</div>
 				</div>

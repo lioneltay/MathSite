@@ -30,27 +30,24 @@ function formatUsersLessonHistory(data) {
 		
 	formattedHistory.history = Object.keys(data.history)
 		.sort((a,b) => data.history[b].timestamp - data.history[a].timestamp)
-		.map(key => formatLessonHistory(data.history[key]))
+		.map(key => formatLessonData(data.history[key]))
 		
 	return formattedHistory
 }
 
-function formatLessonHistory(history) {
+function formatLessonData(lessonData) {
 	return {
-		...history,
-		homework: formatLessonHomework(history.homework),
+		...lessonData,
+		links: formatLinks(lessonData.links),
 	}
 }
 	
-function formatLessonHomework(homework) {
-	return {
-		...homework,
-		tasks: formatLessonTasks(homework.tasks),
-	}
+function formatLinks(links) {
+	return Object.keys(links).map(key => formatLink(links[key]))
 }
 
-function formatLessonTasks(tasks) {
-	return Object.keys(tasks).map(key => tasks[key])
+function formatLink(link) {
+	return link
 }
 
 export const fetchUsersLessonHistory = (uid) => (dispatch) => {

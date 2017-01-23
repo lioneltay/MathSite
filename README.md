@@ -3,17 +3,20 @@ Math Site for Tutoring
 
 *** TODOS ***
 
--investigate hot module reloader
--webpack resolve root scss import
-
 -implement lesson history
-	-lesson details page
+	-implement redux and firebase api for lessons AddEditLesson component
 	-lesson takes props or router params
 	-add lesson feature, only available to admin
+	
 
--think of a good way to save markup to firebase
-
+-write power functions worksheet
+-write function worksheet
 ---
+
+-graph library
+
+-bookmark location on page HTML things
+
 
 
 

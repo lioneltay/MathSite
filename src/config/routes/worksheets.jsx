@@ -7,7 +7,15 @@ import {
 	ReciprocalFunctions,
 	CompositeFunctions,
 	InverseFunctions,
+	PowerFunctions,
+	FunctionProperties,
 } from 'components/worksheet/topics/Functions'
+
+import {
+	TypesOfTransformations,
+	Transformations,
+	TransformationsMatrix,	
+} from 'components/worksheet/topics/Transformations'
 
 import { 
 	CirclesEllipsesAndHyperbolas,
@@ -27,6 +35,12 @@ const worksheetRoutes = (
 		<Route path='Functions/ReciprocalFunctions' component={ReciprocalFunctions} />
 		<Route path='Functions/CompositeFunctions' component={CompositeFunctions} />
 		<Route path='Functions/InverseFunctions' component={InverseFunctions} />
+		<Route path='Functions/PowerFunctions' component={PowerFunctions} />
+		<Route path='Functions/FunctionProperties' component={FunctionProperties} />
+		
+		<Route path='Functions/TypesOfTransformations' component={TypesOfTransformations} />
+		<Route path='Functions/Transformations' component={Transformations} />
+		<Route path='Functions/TransformationsMatrix' component={TransformationsMatrix} />
 
 		<Route path='CoordinateGeometry/CirclesEllipsesAndHyperbolas' component={CirclesEllipsesAndHyperbolas} />	
 	</Route>

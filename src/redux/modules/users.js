@@ -4,11 +4,16 @@ import { formatUserDetails } from 'helpers/format'
 import { firebaseAuth } from 'config/constants'
 import { fetchUser } from 'helpers/api'
 
+const REMOVE_FETCHING_USER = 'REMOVE_FETCHING_USER'
 const FETCHING_USER = 'FETCHING_USER'
 const FETCHING_USER_SUCCESS = 'FETCHING_USER_SUCCESS'
 const FETCHING_USER_FAILURE = 'FETCHING_USER_FAILURE'
 const AUTH_USER = 'AUTH_USER'
 const UNAUTH_USER = 'UNAUTH_USER'
+
+const removeFetchingUser = () => ({
+	type: REMOVE_FETCHING_USER,
+})
 
 const fetchingUser = () => ({
 	type: FETCHING_USER,
@@ -68,6 +73,8 @@ export const checkAuth = () => (dispatch) => {
 					dispatch(authUser(user.info.uid))
 				})
 				.catch(error => dispatch(fetchingUserFailure(error)))
+		} else {
+			dispatch(removeFetchingUser())
 		}
 	})
 }
@@ -98,6 +105,12 @@ const initialUsersState = {
 
 export default function users(state = initialUsersState, action) {
 	switch(action.type) {
+		case REMOVE_FETCHING_USER:
+			return {
+				...state,
+				isFetching: false,
+				error: '',
+			}
 		case FETCHING_USER:
 			return {
 				...state,

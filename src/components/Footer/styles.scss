@@ -1,10 +1,11 @@
 .Footer {
 	display: flex;
 	background: #f0f0f0;
-	padding: 25px;
+	padding: 25px 100px;
 	column-count: 3;
 	column-width: 100px;
 	column-rule: 1px solid black;
+	justify-content: space-around;
 	
 	section {
 		display: flex;

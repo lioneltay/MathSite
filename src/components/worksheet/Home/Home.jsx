@@ -8,17 +8,21 @@ const Home = () => (
 		<h1>Contents - Worksheets/Notes</h1>
 		<Contents>
 			<Topic name='Sets'>
+			{/*
 				<SubTopic name='Set Notation [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Sets/SetNotation`}/>
 				<SubTopic name='Set Builder Notation [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Sets/SetBuilder`}/>
+			*/}
 			</Topic>
 			
 			<Topic name='Functions'>
 				<SubTopic name='Function Properties' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/FunctionProperties`}/>
 				<SubTopic name='Composite Functions' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/CompositeFunctions`}/>
-				<SubTopic name='Inverse Functions' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/InverseFunctions`}/>				
+				<SubTopic name='Inverse Functions' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/InverseFunctions`}/>
+			{/*
 				<SubTopic name='Power Functions' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/PowerFunctions`}/>							
 				<SubTopic name='Absolute Value Functions [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/AbsoluteValueFunctions`}/>
 				<SubTopic name='Reciprocal Functions [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/Functions/ReciprocalFunctions`}/>
+			*/}
 			</Topic>
 			
 			<Topic name='Transformations'>
@@ -28,7 +32,9 @@ const Home = () => (
 			</Topic>
 			
 			<Topic name='Coordinate Geometry'>
+			{/*
 				<SubTopic name='Circles, Ellipses and Hyperbolas [TODO]' path={`${BASE_URL}/${WORKSHEETS_URL}/CoordinateGeometry/CirclesEllipsesAndHyperbolas`}/>
+			*/}
 			</Topic>
 			
 			<Topic name='Trigonometry and Circular Functions'></Topic>

@@ -13,7 +13,7 @@ const LeftLinks = ({ admin }) => {
 	return (
 		<ul>
 			<li><IndexLink to={BASE_URL}>Home</IndexLink></li>
-			{ admin ? <li><NavLink to={`${BASE_URL}/admin`}>ADMIN</NavLink></li> : null }
+			{ admin ? <li><NavLink to={`${BASE_URL}/admin`}>Admin</NavLink></li> : null }
 		</ul>
 	)
 }

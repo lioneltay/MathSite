@@ -15,23 +15,23 @@ const Topic = ({ name, topicNum, children }) => {
 	return (
 		<div className='Topic'>
 			<div className="row">
-				<div className="col-sm-2" />
+				<div className="col-sm-1" />
 				<div className="col-sm-10">
 					<h2>
 						<div className='number'>{`${topicNum}`}</div>
 						<div className='name'>{`${name}`}</div>
 					</h2>
 				</div>
-				<div className="col-sm-0" />
+				<div className="col-sm-1" />
 			</div>
 			<div className="row">
-				<div className="col-sm-3" />
-				<div className="col-sm-9">
+				<div className="col-sm-1" />
+				<div className="col-sm-10">
 					<ul>
 						{subtopics}
 					</ul>
 				</div>
-				<div className="col-sm-0" />
+				<div className="col-sm-1" />
 			</div>
 		</div>
 	)

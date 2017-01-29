@@ -9,7 +9,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "set NODE_ENV=production && npm run clean && webpack -p",
+    "build": "set NODE_ENV=production && npm run clean && webpack",
     "devbuild": "npm run clean && webpack",
     "serve": "webpack-dev-server",
     "serverbuild": "set NODE_ENV=production && npm run clean && webpack"

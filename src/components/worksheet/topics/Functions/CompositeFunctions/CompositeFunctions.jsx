@@ -35,7 +35,7 @@ const CompositeFunctions = () => (
 				<Description>Answers</Description>
 				<Part><T t='h(x) = 2(3x) + 1 = 6x + 1'/></Part>
 				<Part><T t='h(x) = 2(x^2 + 1) - 1 = 2x^2 + 1'/></Part>
-				<Part><T t='h(x) = (2x + 3)^2 + 3x = 4x^2 + 15x + 9'/></Part>
+				<Part><T t='h(x) = (2x + 3)^2 + 3(2x + 3) = 4x^2 + 18x +18'/></Part>
 			</Answer>
 		</Question>
 		
@@ -168,19 +168,19 @@ const CompositeFunctions = () => (
 				<Description>Answers</Description>
 								
 				<Part>
-					<div><T t='f(g(x)'/> exists since <T t='\text{range}(g) = [0,3] \subseteq [0,\infty) = \text{domain}(f)'/></div>
+					<div><T t='f(g(x))'/> exists since <T t='\text{range}(g) = [0,3] \subseteq [0,\infty) = \text{domain}(f)'/></div>
 					<br />
-					<div><T t='f(g(x) = (\sqrt{9 - x} - 1)^2'/> for <T t='x \in [0,3]'/>.</div>
+					<div><T t='f(g(x)) = (\sqrt{9 - x} - 1)^2'/> for <T t='x \in [0,3]'/>.</div>
 				</Part>
 				
 				<Part>
-					<div><T t='f(g(x)'/> does not exists since <T t='\text{range}(g) = (-\infty,0] \not\subseteq [1,\infty) = \text{domain}(f)'/>.</div>
+					<div><T t='f(g(x))'/> does not exists since <T t='\text{range}(g) = (-\infty,0] \not\subseteq [1,\infty) = \text{domain}(f)'/>.</div>
 					<br />
 					<div>Furthermore, <T t='\text{range}(g) \cap \text{domain}(f) = \emptyset'/> so there is no restriction, <T t='g^*'/>, of <T t='g'/>, such that <T t='h^*(x) = f(g^*(x))'/> would exist (none of the outputs of <T t='g'/> are valid inputs of <T t='f'/>).</div>
 				</Part>
 				
 				<Part>
-					<div><T t='f(g(x)'/> does not exist since <T t='\text{range}(g) = [1,\infty) \not\subseteq (-\infty,5] = \text{domain}(f)'/></div>
+					<div><T t='f(g(x))'/> does not exist since <T t='\text{range}(g) = [1,\infty) \not\subseteq (-\infty,5] = \text{domain}(f)'/></div>
 					<br />
 					<div>If we create <T t='g^*: [-2,2] \rightarrow \mathbb{R}, g^*(x) = x^2 + 1'/> then <T t='\text{range}(g^*) = [1,5] \subseteq (-\infty,5] = \text{domain}(f)'/> so that <T t='f(g^*(x)) = x^2 + 1'/> exists for <T t='x \in [-2,2]'/>.</div>
 				</Part>

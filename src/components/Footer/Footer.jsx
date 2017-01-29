@@ -22,7 +22,7 @@ const UnauthedLinks = () => (
 
 const Footer = ({ isAuthed, authedId }) => (
 	<div className='Footer'>
-		<section className>
+		<section>
 			<div><em>Not a terribly interesting site. We also only have GitHub :/.</em></div>
 			<div className='social-media-icons'>
 				<a href='https://github.com/lioneltay/MathSite'><i className="fa fa-github icon" aria-hidden="true"></i></a>

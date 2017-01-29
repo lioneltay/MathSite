@@ -82,7 +82,7 @@ const InverseFunctions = () => (
 			</p>
 		</Note>
 		
-		<Question partsPerRow={1} number={3}>
+		<Question partsPerRow={1} number={4}>
 			<Description>
 				For each of the following <strong>relations</strong> find the points of intersection with its inverse firstly by solving <T t='f(x) = f^{-1}(x)'/>, then by solving either <T t='f(x) = x'/> or	<T t='f^{-1}(x) = x'/>.
 			</Description>
@@ -93,7 +93,7 @@ const InverseFunctions = () => (
 			</Part>
 		</Question>
 		
-		<Question partsPerRow={2} number={4}>
+		<Question partsPerRow={2} number={5}>
 			<Description>
 				For each of the following <strong>functions</strong> find the points of intersection with its inverse by solving either <T t='f(x) = x'/> or <T t='f^{-1}(x) = x'/>.
 			</Description>

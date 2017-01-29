@@ -10,7 +10,8 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import webpack from 'webpack'
 
 const NPM_LAUNCH_COMMAND = process.env.npm_lifecycle_event
-const SERVER_BUILD = NPM_LAUNCH_COMMAND === 'serverbuild'
+const SERVER_BUILD = NPM_LAUNCH_COMMAND === 'build'
+process.env.BABEL_ENV = NPM_LAUNCH_COMMAND
 
 const VENDOR_LIBS = [
 	'react',
@@ -132,6 +133,6 @@ const prod = {
 	],
 }
 
-export default NPM_LAUNCH_COMMAND === 'build' 
+export default SERVER_BUILD
 	?	{ ...base, ...prod }
 	: { ...base, ...dev }

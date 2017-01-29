@@ -30,7 +30,7 @@ class MainContainer extends Component {
 					</nav>
 				</header>
 				
-				<section>
+				<section className='body'>
 					{this.props.children}
 				</section>
 				

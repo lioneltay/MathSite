@@ -1,10 +1,8 @@
 .Main {
 	display: flex;
 	flex-direction: column;
-	margin: 0 auto;
-	width: 80%;
+	width: 100%;
 	min-height: 100vh;
-	max-width: 1000px;
 	
 	header {
 		flex-grow: 0;
@@ -16,5 +14,11 @@
 	
 	footer {
 		flex-grow: 0;
+	}
+	
+	.body {
+		margin: 0 auto;
+		max-width: 1000px;
+		width: 80%;
 	}
 }
